@@ -34,6 +34,12 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    background-position: 70%;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -93,39 +99,110 @@ body {
   font-size: 1.5rem;
 }
 
-#header-container .header-itens .menu-itens {
+#header-container .header-itens .menu-button {
   position: absolute;
   right: 0;
 }
 
-#header-container .header-itens .menu-itens ul {
+#header-container .header-itens .menu-button .fa-bars {
+  display: none;
+}
+
+#header-container .header-itens .menu-button .menu-itens ul {
   display: flex;
   height: 30px;
 }
 
-#header-container .header-itens .menu-itens ul li {
+#header-container .header-itens .menu-button .menu-itens ul li {
   border-radius: 15px;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-#header-container .header-itens .menu-itens ul li a {
+#header-container .header-itens .menu-button .menu-itens ul li a {
   color: var(--text-gray);
   padding: 20px;
   font-size: 1.125rem;
   text-shadow: 0px 0px 20px #000000;
 }
 
-#header-container .header-itens .menu-itens ul .green-iten {
+#header-container .header-itens .menu-button .menu-itens ul .green-iten {
   background-color: var(--green-button);
   box-shadow: 0px 0px 20px #000000;
   -moz-box-shadow: 0px 0px 20px #000000;
   -webkit-box-shadow: 0px 0px 20px #000000;
 }
 
-#header-container .header-itens .menu-itens ul .green-iten a {
+#header-container .header-itens .menu-button .menu-itens ul .green-iten a {
   color: var(--text-black);
+}
+
+@media screen and (max-width: 900px) {
+  #header-container {
+    height: 80px;
+  }
+  #header-container .header-itens img {
+    height: 50px;
+    margin-right: 30px;
+  }
+  #header-container .header-itens h2 {
+    display: none;
+  }
+  #header-container .header-itens .menu-button {
+    position: absolute;
+    right: 0;
+  }
+  #header-container .header-itens .menu-button .fa-bars {
+    display: flex;
+  }
+  #header-container .header-itens .menu-button a i {
+    font-size: 2rem;
+    color: var(--text-gray);
+  }
+  #header-container .header-itens .menu-button .menu-itens {
+    display: none;
+    position: absolute;
+    right: -20px;
+    top: -25px;
+    height: 350px;
+    width: 250px;
+    background: var(--text-black);
+    border-radius: 0 0 0 30px;
+  }
+  #header-container .header-itens .menu-button .menu-itens ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #header-container .header-itens .menu-button .menu-itens ul li {
+    border-radius: 15px;
+    height: 30px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  #header-container .header-itens .menu-button .menu-itens ul li a {
+    color: var(--text-gray);
+    padding: 20px;
+    font-size: 1.125rem;
+    text-shadow: 0px 0px 20px #000000;
+  }
+  #header-container .header-itens .menu-button .menu-itens ul .green-iten {
+    background-color: var(--green-button);
+    box-shadow: 0px 0px 20px #000000;
+    -moz-box-shadow: 0px 0px 20px #000000;
+    -webkit-box-shadow: 0px 0px 20px #000000;
+  }
+  #header-container .header-itens .menu-button .menu-itens ul .green-iten a {
+    color: var(--text-black);
+  }
+  #header-container .header-itens .menu-button:hover .menu-itens {
+    display: flex;
+  }
 }
 
 .menu-background {
@@ -185,7 +262,7 @@ body {
 
 #main-container #introduction .container-introduction p {
   color: var(--text-white);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #main-container #introduction .container-introduction h2, #main-container #introduction .container-introduction h3, #main-container #introduction .container-introduction i, #main-container #introduction .container-introduction .blink {
@@ -204,6 +281,27 @@ body {
   -moz-box-shadow: 0px 0px 20px #000000;
   -webkit-box-shadow: 0px 0px 20px #000000;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #main-container #introduction .container-introduction h3 {
+    font-size: 3rem;
+  }
+  #main-container #introduction .container-introduction h3 i {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #main-container #introduction {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-container #introduction {
+    align-items: center;
+  }
 }
 
 #main-container #about {
@@ -285,6 +383,86 @@ body {
   font-weight: 600;
 }
 
+@media screen and (max-width: 768px) {
+  #main-container #about .container-about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  #main-container #about .container-about .img {
+    width: 30%;
+    height: 25%;
+  }
+  #main-container #about .container-about .img img {
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px #000000;
+    -moz-box-shadow: 0px 0px 100px #000000;
+    -webkit-box-shadow: 0px 0px 100px #000000;
+    border-radius: 50%;
+  }
+  #main-container #about .container-about .text {
+    max-width: 100%;
+    height: 55%;
+    padding: 15px 15px;
+  }
+  #main-container #about .container-about .text h2 {
+    font-size: 2rem;
+    position: relative;
+  }
+  #main-container #about .container-about .text h2 :after {
+    width: 80px;
+    height: 2px;
+    background: var(--text-black);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  #main-container #about .container-about .text h2 .green {
+    font-size: 2rem;
+    color: var(--green-button);
+  }
+  #main-container #about .container-about .text h3 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    margin-top: 20px;
+  }
+  #main-container #about .container-about .text p {
+    font-size: 1rem;
+  }
+  #main-container #about .container-about .text p span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-width: 400px) {
+  #main-container #about .container-about .text p {
+    font-size: 0.8rem;
+  }
+  #main-container #about .container-about .text p span {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #main-container #about {
+    height: 50vh;
+    padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-container #about {
+    height: 60%;
+    padding: 15px 0;
+  }
+}
+
 #main-container #projects {
   width: 100%;
   display: flex;
@@ -357,6 +535,15 @@ body {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 768px) {
+  #main-container #projects .container-projects {
+    margin: 20px 20px;
+  }
+  #main-container #projects .container-projects h2 {
+    font-size: 2rem;
+  }
+}
+
 #main-container #footer {
   width: 100%;
   height: 150px;
@@ -393,4 +580,16 @@ body {
 #main-container #footer .container-footer p {
   color: var(--text-gray);
   padding-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #main-container #footer {
+    height: 100px;
+  }
+  #main-container #footer .container-footer .social-medias {
+    padding-bottom: 0;
+  }
+  #main-container #footer .container-footer .social-medias ul li a i {
+    font-size: 1.5rem;
+  }
 }
